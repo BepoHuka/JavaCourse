@@ -12,12 +12,12 @@ public class Generator {
 
 	public static int generateAge() {
 		Random randomushka = new Random();
-		return randomushka.nextInt(10) + 1;
+		return randomushka.nextInt(20) + 1;
 	}
 
 	public static String generateSize() {
 		Random randomushka = new Random();
-		String[] sizes = new String[] {"Big", "Medium", "Small"};
+		String[] sizes = new String[] {"big", "medium", "small"};
 		String random = (sizes[randomushka.nextInt(sizes.length)]);
 		return random;
 	}

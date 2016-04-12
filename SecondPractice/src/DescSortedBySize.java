@@ -10,7 +10,3 @@ public class DescSortedBySize implements Comparator<Dog> {
        }
        
 }
-
-
-
-

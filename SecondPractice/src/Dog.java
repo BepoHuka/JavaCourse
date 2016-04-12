@@ -1,4 +1,4 @@
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Scanner;
 
 public class Dog {
@@ -112,17 +112,17 @@ public class Dog {
                 int inputNum = sc.nextInt();
                 
                 switch (inputNum) {
-                	case 1:	Arrays.sort(dogs, new AscSortedByName());
+                	case 1:	Sort.insertionSort(dogs, new AscSortedByName());
                          	break;
-                	case 2:	Arrays.sort(dogs, new DescSortedByName());
+                	case 2:	Sort.insertionSort(dogs, new DescSortedByName());
                     		break;
-                	case 3:	Arrays.sort(dogs, new AscSortedBySize());
+                	case 3:	Sort.insertionSort(dogs, new AscSortedBySize());
                 			break;
-                	case 4:	Arrays.sort(dogs, new DescSortedBySize());
+                	case 4:	Sort.insertionSort(dogs, new DescSortedBySize());
                 			break;
-                	case 5:	Arrays.sort(dogs, new AscSortedByAge());
+                	case 5:	Sort.insertionSort(dogs, new AscSortedByAge());
         					break;
-                	case 6:	Arrays.sort(dogs, new DescSortedByAge());
+                	case 6:	Sort.insertionSort(dogs, new DescSortedByAge());
         					break;          	
     
                 }

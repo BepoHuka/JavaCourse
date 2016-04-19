@@ -1,21 +1,28 @@
 
 public class Restangle {
 
-	int  sideA;
-	int  sideB;
+	int width;
+	int length;
+	float x;
+	float y;
 	
-	public Restangle (int sideA, int sideB){
-			this.sideA = sideA;
-			this.sideB = sideB;
+	public Restangle (int width, int length, int x, int y){
+			this.width = width;
+			this.length = length;
+			this.x = x;
+			this.y = y;
 	}
 	
 	public double square(){
-		return this.sideA*this.sideB; 
+		return this.width*this.length; 
 	}
 	
 	public double perimetr(){
-		return 2*(this.sideA+this.sideB);
+		return 2*(this.width+this.length);
 	}	
 	
+	public void move(float x, float y){
+
+		}
 
 }

@@ -9,7 +9,7 @@ public class Main_Class {
 		String inputString = sc.nextLine();
 		
 		while (!inputString.matches("^\\d+\\s+\\D*|^\\d+\\s*$")) {
-			System.out.print("Incorrec input. Enter amount of dogs and their names devided by space: ");
+			System.out.print("Incorrect input. Enter amount of dogs and their names devided by space: ");
 			inputString = sc.nextLine();
 		}
 	   
@@ -24,7 +24,7 @@ public class Main_Class {
 		inputString = sc.nextLine();
 	   
 		while (!inputString.matches("([sS]mall\\s*|[mM]edium\\s*|[bB]ig\\s*)*")) {    	   
-			System.out.print("Incorrec input. Enter sizes of dogs (small, medium, big) devided by space: ");
+			System.out.print("Incorrect input. Enter sizes of dogs (small, medium, big) devided by space: ");
 			inputString = sc.nextLine();
 		}
 	   
@@ -42,9 +42,10 @@ public class Main_Class {
 		System.out.print("Enter age of dogs (0-20) devided by space: ");
 		inputString = sc.nextLine();
 		
-		while (!inputString.matches("(((1?[0-9])|20)\\s*)*")) {    	   
-			System.out.print("Incorrec input. Enter age of dogs (0-20) devided by space: ");
+		while (!inputString.matches("(^([01]?\\d|20)(\\s+([01]?\\d|20))*)*")) {    	   
+			System.out.print("Incorrect input. Enter age of dogs (0-20) devided by space: ");
 			inputString = sc.nextLine();
+			words = inputString.split("\\s+");
 		}
 	   
 		// Check if entered empty string

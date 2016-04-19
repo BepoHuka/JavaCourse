@@ -77,6 +77,8 @@ public class Main_Class {
         System.out.println("Enter number 1-6: ");
 
         int inputNum = sc.nextInt();
+        
+    
 	            
         switch (inputNum) {
         	case 1:	Sort.insertionSort(dogs, new AscSortedByName());

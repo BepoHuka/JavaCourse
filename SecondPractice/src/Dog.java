@@ -2,6 +2,14 @@ public class Dog {
         String name;        
         String size;
         int age;
+       
+        public enum Dogsize{
+    		small,
+    		medium,
+    		big
+
+        }
+        
         public Dog(){
                 this.name = Generator.generateName();                
                 this.size = Generator.generateSize();
@@ -39,14 +47,13 @@ public class Dog {
         }
         
         public String getSize() {	
-        	sizeToNum();
             return size;
         }
         
         public int getAge() {
             return age;
         }
-
+        
         public int sizeToNum() {
         	if (size == "small")	
         		return 1;
@@ -54,5 +61,6 @@ public class Dog {
         		return 2;
         	else
         		return 3;
-        }
+        } 
+        
 }

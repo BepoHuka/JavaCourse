@@ -2,7 +2,6 @@ public class Dog {
         String name;        
         String size;
         int age;
-
         public Dog(){
                 this.name = Generator.generateName();                
                 this.size = Generator.generateSize();

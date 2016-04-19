@@ -2,14 +2,7 @@ public class Dog {
         String name;        
         String size;
         int age;
-       
-        public enum Dogsize{
-    		small,
-    		medium,
-    		big
-
-        }
-        
+             
         public Dog(){
                 this.name = Generator.generateName();                
                 this.size = Generator.generateSize();

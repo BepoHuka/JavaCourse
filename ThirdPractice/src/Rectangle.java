@@ -3,10 +3,10 @@ public class Rectangle {
 
 	int width;
 	int length;
-	Point start;
+	Point origin;
 	
 	public Rectangle (Point p, int width, int length){
-		this.start = p;
+		this.origin = p;
 		this.width = width;
 		this.length = length;	
 	}
@@ -20,7 +20,25 @@ public class Rectangle {
 	}	
 	
 	public void move(Point p){
-		this.start = p;
+		this.origin = p;
+	}
+	
+	public boolean isInside(Point p){
+		 if ((p.getX() >= origin.getX()) && (p.getX() <= origin.getX() + length))
+		 	if ((p.getY() >= origin.getY()) && (p.getY() <= origin.getY() + width))
+		 		return true;
+		 
+		 return false;	 
+	}
+	
+	public String toString(){
+        String result;
+        result = "Rectangle coordinates: ";
+        result += "[" + origin.getX() + ", " + origin.getY() +"] ";
+        result += "[" + (origin.getX() + length) + ", " + origin.getY() +"] ";
+        result += "[" + origin.getX() + ", " + (origin.getY() + width) +"] ";
+        result += "[" + (origin.getX() + length) + ", " + (origin.getY() + width) +"] ";
+        return result;
 	}
 
 }

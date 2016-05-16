@@ -37,7 +37,7 @@ public class Rectangle {
         result += "[" + origin.getX() + ", " + origin.getY() +"] ";
         result += "[" + (origin.getX() + length) + ", " + origin.getY() +"] ";
         result += "[" + origin.getX() + ", " + (origin.getY() + width) +"] ";
-        result += "[" + (origin.getX() + length) + ", " + (origin.getY() + width) +"] ";
+        result += "[" + (origin.getX() + length) + ", " + (origin.getY() + width) +"]";
         return result;
 	}
 

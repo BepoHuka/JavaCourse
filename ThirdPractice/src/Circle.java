@@ -36,15 +36,18 @@ public class Circle {
 	}
 
 	
-	public double square() {
-		return (Math.PI*Math.pow(this.radius, 2))/4;
+	public double square() {				
+		return (Math.PI*Math.pow(this.radius, 2));
 	}
 	
 
-	public double circuit() {
-		return 2*(Math.PI)*(double)this.radius;
-	}
+	public double circuit() {		
+		return 2*(Math.PI)*(double)this.radius;		
+	}	
 	
+	public void move(Point p){
+		this.origin = p;
+	}
 
 	public Point getLocation(){
 		return this.origin;

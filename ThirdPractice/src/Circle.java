@@ -4,40 +4,25 @@ public class Circle {
 	int radius;
 	
 	//Create circle with radius r around the point
-	public Circle(Point p, int radius){
+	public Circle(Point p, int radius) throws Throwable {
 		this.origin = p; 
 		
-		if (radius == 0) {
-			System.out.println("Radius can't be 0. Will be changed to default 100.");
-			this.radius = 100;
-		}
-				
-		if (radius < 0){
-			System.out.println("Radius can't be negative. Will be taken by abs.");
-			this.radius = Math.abs(radius);
-		} 	
+		if (radius <= 0) 
+			throw new Error("Not positive radius");
 		else 
 			this.radius = radius;
 	}
 	
 	public void setRadius(int radius){
 		
-		if (radius == 0) {
-			System.out.println("Radius can't be 0. Will be changed to default 100.");
-			this.radius = 100;
-		}
-				
-		if (radius < 0){
-			System.out.println("Radius can't be negative. Will be taken by abs.");
-			this.radius = Math.abs(radius);
-		} 	
+		if (radius <= 0) 
+			throw new Error("Not positive radius");
 		else 
 			this.radius = radius;
 	}
-
 	
 	public double square() {				
-		return (Math.PI*Math.pow(this.radius, 2));
+		return Math.PI*Math.pow(this.radius, 2);
 	}
 	
 
@@ -65,14 +50,24 @@ public class Circle {
 		 return false;	 
 	}
 
-	public Rectangle boundingBox(){
+	public Rectangle boundingBox(){ //I totally don't get your comment. Can't understand how this method could be static if it's required Circle?
 		Point rectalngleOrigin = new Point(origin.getX() - radius, origin.getY() - radius);
-		return new Rectangle(rectalngleOrigin, radius*2, radius*2);		
+        try {
+        	Rectangle result = new Rectangle(rectalngleOrigin, radius*2, radius*2);
+        	return result;
+        } catch (Throwable t) {}
+        
+		return null;
+		
+		
 	}
 	
 	public String toString(){
         String result;
         result = "Circle origin: ";
+        /*
+         * result += "[" + origin.toString() + "] ";
+         */
         result += "[" + origin.getX() + ", " + origin.getY() +"]";
         result += ", radius: ";
         result += radius;

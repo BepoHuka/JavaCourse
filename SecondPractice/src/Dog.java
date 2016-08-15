@@ -4,11 +4,11 @@ public class Dog {
 	private DogSize size;
 	private int age;
 
-//	 public Dog() {
-//	 	this.name = Generator.generateName();
-//	 	this.size = Generator.generateSize();
-//	 	this.age = Generator.generateAge();
-//	 } 
+	 public Dog() {
+	 	this.name = Generator.generateName();
+	 	this.size = Generator.generateSize();
+	 	this.age = Generator.generateAge();
+	 } 
 
 	public Dog(String name, DogSize size, int age) {
 		setName(name);
